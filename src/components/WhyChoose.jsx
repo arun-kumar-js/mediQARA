@@ -96,7 +96,9 @@ function WhyChoose() {
               <div className="flex items-center justify-center gap-4">
                 <div className="text-left">
                   <p className="font-semibold text-gray-900">Selvaraj Kumar</p>
-                  <p className="text-gray-600">Founder & Lead Consultant</p>
+                  <p className="text-gray-600">
+                    Medical Devices QA & RA Consultant
+                  </p>
                 </div>
               </div>
             </div>

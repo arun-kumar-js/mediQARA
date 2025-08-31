@@ -1,7 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import Logo from "./Logo";
-import whatsappLogo from "../assets/whatsapp_logo.png";
 
 function Footer() {
   return (
@@ -19,30 +18,17 @@ function Footer() {
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Your trusted partner in Medical Device Quality & Regulatory
-                Excellence. With over 17 years of experience, we help medical
-                device companies achieve seamless compliance and build robust
-                quality management systems.
+                Excellence. we help medical device companies achieve seamless
+                compliance and build robust quality management systems.
               </p>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://www.linkedin.com/in/selvaraj-kumar/"
+                  href="https://www.linkedin.com/company/mediqara-tech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
                 >
                   <Linkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://wa.me/918122590434"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity duration-300"
-                >
-                  <img
-                    src={whatsappLogo}
-                    alt="WhatsApp"
-                    className="w-6 h-6 object-contain"
-                  />
                 </a>
               </div>
             </div>

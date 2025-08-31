@@ -278,14 +278,9 @@ function Services() {
                 Let us help you achieve seamless compliance and build a robust
                 quality management system for your medical device business.
               </p>
-              <a
-                href="https://wa.me/918122590434"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-              >
+              <button className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
                 Schedule a Consultation
-              </a>
+              </button>
             </div>
           </div>
         </div>

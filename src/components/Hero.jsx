@@ -61,9 +61,8 @@ function Hero() {
           <p className="text-lg lg:text-xl mb-12 max-w-3xl mx-auto leading-relaxed text-blue-50">
             At MediQARA Tech, we help medical device and healthcare companies
             achieve seamless Quality Assurance (QA) and Regulatory Affairs (RA)
-            compliance. With over 17 years of hands-on experience, we deliver
-            solutions that keep your business audit-ready, globally compliant,
-            and quality-driven.
+            compliance. we deliver solutions that keep your business
+            audit-ready, globally compliant, and quality-driven.
           </p>
 
           {/* Key Highlights */}
@@ -88,9 +87,7 @@ function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://wa.me/918122590434"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@mediqaratech.com?subject=Get Started with MediQARA Tech&body=Hello,%0D%0A%0D%0AI would like to get started with your services.%0D%0A%0D%0APlease provide more information about:%0D%0A- Your services%0D%0A- Pricing%0D%0A- Next steps%0D%0A%0D%0AThank you,%0D%0A[Your Name]"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
             >
               Get Started Today

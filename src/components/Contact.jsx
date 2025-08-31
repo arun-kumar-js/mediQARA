@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Linkedin,
-  Send,
-  MessageCircle,
-} from "lucide-react";
-import whatsappLogo from "../assets/whatsapp_logo.png";
+import { Phone, Mail, MapPin, Clock, Linkedin, Send } from "lucide-react";
 import emailjs from "emailjs-com";
 
 function Contact() {
@@ -151,7 +142,7 @@ function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+91 8122590434"
+                    placeholder="+91 9876543210"
                   />
                 </div>
 
@@ -253,7 +244,9 @@ function Contact() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <h4 className="font-semibold text-gray-900">
+                      Phone / WhatsApp
+                    </h4>
                     <p className="text-gray-600">+91 8122590434</p>
                   </div>
                 </div>
@@ -269,38 +262,13 @@ function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-green-200">
-                    <img
-                      src={whatsappLogo}
-                      alt="WhatsApp"
-                      className="w-8 h-8 object-contain"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">WhatsApp</h4>
-                    <a
-                      href="https://wa.me/918122590434"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-600 hover:text-green-700 transition-colors duration-300 font-medium"
-                    >
-                      +91 8122590434
-                    </a>
-                    <p className="text-gray-500 text-sm mt-1">
-                      Click to chat on WhatsApp
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Address</h4>
                     <p className="text-gray-600">
-                      4/198 E, Pattumuthuiyyanarkovil Street,
-                      <br />
+                      4/198 E, Pattumuthuiyyanarkovil Street, <br />{" "}
                       Arunachalapuram,
                       <br />
                       Tenkasi – 627862,
@@ -334,26 +302,13 @@ function Contact() {
                 </h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.linkedin.com/in/selvaraj-kumar/"
+                    href="https://www.linkedin.com/company/mediqara-tech/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors duration-300"
                   >
                     <Linkedin className="w-5 h-5" />
                     <span>LinkedIn</span>
-                  </a>
-                  <a
-                    href="https://wa.me/918122590434"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 transition-colors duration-300"
-                  >
-                    <img
-                      src={whatsappLogo}
-                      alt="WhatsApp"
-                      className="w-5 h-5 object-contain"
-                    />
-                    <span>WhatsApp</span>
                   </a>
                 </div>
               </div>
