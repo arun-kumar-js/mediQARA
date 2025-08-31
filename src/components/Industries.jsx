@@ -26,7 +26,7 @@ function Industries() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Industries We Serve
+              Industries We Service
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
