@@ -1,32 +1,83 @@
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="bg-blue-900 text-white py-12">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl font-bold">MediQARA Tech</h1>
-        <p className="mt-2 text-lg">Your Trusted Partner in Medical Device Quality & Regulatory Excellence</p>
-        <p className="mt-4 max-w-2xl mx-auto">
-          At MediQARA Tech, we help medical device and healthcare companies achieve seamless Quality Assurance (QA) and Regulatory Affairs (RA) compliance. 
-          With over 17 years of hands-on experience, we deliver solutions that keep your business audit-ready, globally compliant, and quality-driven.
-        </p>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-          {[
-            'ISO 13485 & MDR Compliance Support',
-            'Regulatory Documentation & Submissions',
-            'Internal & Supplier Audits',
-            'Risk Management & CAPA Implementation'
-          ].map((text, i) => (
-            <div key={i} className="flex items-center justify-center space-x-2">
-              <CheckCircle className="text-green-400" />
-              <span>{text}</span>
-            </div>
-          ))}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 to-blue-800 backdrop-blur-sm border-b border-blue-700 shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Logo size="default" />
+            <span className="ml-3 text-xl font-bold text-white">
+              MediQARA Tech
+            </span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-blue-100 hover:text-white font-medium transition-colors duration-300 relative group"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+              </button>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-blue-100 hover:text-white transition-colors duration-300"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-blue-700 bg-blue-800">
+            <nav className="py-4 space-y-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left px-4 py-2 text-blue-100 hover:text-white hover:bg-blue-700 font-medium transition-colors duration-300"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
