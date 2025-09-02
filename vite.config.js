@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", // Use root path for custom domain
+  base: "/mediQARA/", // Use repo name for GitHub Pages
   build: {
     rollupOptions: {
       output: {
