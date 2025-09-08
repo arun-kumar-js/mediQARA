@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Add CNAME
-        run: echo "www.mediqara.com" > dist/CNAME
+        run: echo "www.mediqaratech.com" > dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
