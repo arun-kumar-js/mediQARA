@@ -1,4 +1,5 @@
 import React from "react";
+import logoImage from "../assets/logo.png";
 
 function Logo({ className = "", size = "default" }) {
   const sizeClasses = {
@@ -10,7 +11,7 @@ function Logo({ className = "", size = "default" }) {
 
   return (
     <img
-      src="./logo.png"
+      src={logoImage}
       alt="MediQARA Tech Logo"
       className={`${sizeClasses[size]} ${className}`}
     />
